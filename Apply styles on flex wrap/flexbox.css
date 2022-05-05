@@ -1,0 +1,14 @@
+@import url(shared.css);
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid #000; */
+}
+
+div {
+    --size: 250px;
+    width: var(--size);
+    height: var(--size);
+    margin: .25rem;
+}

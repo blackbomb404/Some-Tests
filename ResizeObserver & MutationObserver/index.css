@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 225, 169);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    max-width: 1430px;
+    min-width: 20rem;
+}
+.wrapper div {
+    --size: 400px;
+    width: var(--size);
+    height: var(--size);
+}
+.first {
+    background-color: brown;
+}
+.second {
+    background-color: rgb(252, 177, 65);
+}
+/* .third {
+    background-color: blueviolet;
+} */
+
+.flex-centered {
+    justify-content: center;
+}
+
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}

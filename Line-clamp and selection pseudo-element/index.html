@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            min-height: 100vh;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .wrapper {
+            background-color: #dedede;
+            padding: 1rem;
+            flex-basis: 35%;
+        }
+        p::selection{
+            background-color: rebeccapurple;
+            color: #fff;
+        }
+        .expand {
+            border: none;
+            border-radius: 4px;
+            background-color: rebeccapurple;
+            color: #fff;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+        }
+        .expand:hover {
+            background-color: rgb(88, 31, 146)
+        }
+
+        .line-clamp {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <p class="line-clamp">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque ullamcorper faucibus. Duis efficitur
+            luctus auctor. Vivamus nibh purus, tempus eget ex eget, pretium tempor sapien. Aliquam non massa eget eros
+            lobortis hendrerit at id risus. Duis tristique euismod augue, vel pharetra urna tincidunt finibus. Sed nec
+            pharetra augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam
+            gravida aliquam augue, eu hendrerit purus luctus in. Praesent et vehicula lacus. Nunc luctus porttitor mauris
+            vel elementum.
+            pharetra augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam
+            gravida aliquam augue, eu hendrerit purus luctus in. Praesent et vehicula lacus. Nunc luctus porttitor mauris
+            vel elementum.
+        </p>
+        <button class="expand">
+            Click to expand
+        </button>
+    </div>
+    <script type="text/javascript">
+        const btn = document.querySelector('.expand');
+        const p = document.querySelector('.line-clamp');
+
+        btn.addEventListener('click', e => {
+            if(p.classList.contains('line-clamp')){
+                p.classList.remove('line-clamp');
+                btn.textContent = 'Click to shrink';
+            } else {
+                p.classList.add('line-clamp');
+                btn.textContent = 'Click to expand';
+            }
+        })
+    </script>
+</body>
+
+</html>

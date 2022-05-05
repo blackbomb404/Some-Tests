@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+.first {
+    background-color: blue;
+}
+.second {
+    background-color: green;
+}
+.third {
+    background-color: gold;
+}
+.fourth {
+    background-color: orange;
+}
+.fifth {
+    background-color: blueviolet;
+}
+
+.flex-centered {
+    justify-content: center;
+}
+
+div {
+    transition: all .25s;
+}
+div:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px 2px rgba(0,0,0,.3);
+}
